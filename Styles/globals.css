@@ -1,0 +1,115 @@
+// styles/globals.css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9ff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: #1a1a2e;
+  color: #e0e0ff;
+}
+
+#splash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  animation: fadeOut 2s forwards;
+  z-index: 1000;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  99% { opacity: 0; visibility: visible; }
+  100% { opacity: 0; visibility: hidden; display: none; }
+}
+
+.toggle-darkmode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: #6a11cb;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, #a18cd1, #fbc2eb);
+  color: #fff;
+}
+
+.hero .mascot {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #6a11cb;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #4b0fad;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #eef1f9;
+}
+
+.feature {
+  background-color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, opacity 1s;
+  opacity: 0;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #dfe6f0;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #6a11cb;
+  text-decoration: none;
+}
